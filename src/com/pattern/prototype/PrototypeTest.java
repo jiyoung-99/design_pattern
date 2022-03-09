@@ -9,11 +9,11 @@ public class PrototypeTest {
         prototypeBox.addPrototype(new Prototype("body1", "manipulator1", "controller1"));
         prototypeBox.addPrototype(new Prototype("body2", "manipulator2", "controller2"));
 
-        System.out.println(prototypeBox.toString());
+        System.out.println(prototypeBox);
 
         try {
             PrototypeBox newBox = (PrototypeBox) prototypeBox.clone();
-            System.out.println(newBox.toString());
+            System.out.println(newBox);
         } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }

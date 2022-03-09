@@ -38,14 +38,14 @@ public class Prototype {
         this.controller = controller;
     }
 
-    @Override
-    public String toString() {
-        return "Prototype{" +
-                "body='" + body + '\'' +
-                ", manipulator='" + manipulator + '\'' +
-                ", controller='" + controller + '\'' +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "Prototype{" +
+//                "body='" + body + '\'' +
+//                ", manipulator='" + manipulator + '\'' +
+//                ", controller='" + controller + '\'' +
+//                '}';
+//    }
 }
 
 //자바의 object 는 바뀌면 안되는 것, 함부로 바꾸면 안된다. 복제를 가능하게 선언하는 것이 interface Cloneable
@@ -72,11 +72,15 @@ class PrototypeBox implements Cloneable {
     @Override
     protected Object clone() throws CloneNotSupportedException {
 
+        //깊은 복사
         PrototypeBox prototypeBox = new PrototypeBox();
         for(Prototype prototype : box) {
             prototypeBox.addPrototype(new Prototype(prototype.getBody(), prototype.getManipulator(), prototype.getController()));
         }
-        return super.clone();
+//        //주소만 복사하는 얕은 복사
+//        return super.clone();
+        //값을 복제하는 깊은 복사
+        return prototypeBox;
     }
 
     @Override
