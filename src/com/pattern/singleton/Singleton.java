@@ -18,8 +18,4 @@ public class Singleton {
         return instance;
     };
 
-
-//    public static void main(String[] args) {
-//
-//    }
 }
