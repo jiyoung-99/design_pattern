@@ -1,4 +1,4 @@
-# Prototype
+# 클래스의 인스턴스 생성 패턴 - Prototype
 
 ## prototype?
 * 하나의 견본을 만들어 놓고 복제해서 객체를 생성하는 방법
