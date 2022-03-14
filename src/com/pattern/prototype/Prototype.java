@@ -38,14 +38,6 @@ public class Prototype {
         this.controller = controller;
     }
 
-//    @Override
-//    public String toString() {
-//        return "Prototype{" +
-//                "body='" + body + '\'' +
-//                ", manipulator='" + manipulator + '\'' +
-//                ", controller='" + controller + '\'' +
-//                '}';
-//    }
 }
 
 //자바의 object 는 바뀌면 안되는 것, 함부로 바꾸면 안된다. 복제를 가능하게 선언하는 것이 interface Cloneable
